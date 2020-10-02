@@ -1,0 +1,24 @@
+<apex:page standardController="Shipment_Detail__c" >
+    <table border="10" width="50%" height="100%" >
+
+       <apex:repeat value="{!Shipment_Detail__c}">
+           <tr>
+               <th>Quantity</th>
+               <td>{!Shipment_Detail__c.Quantity__c}</td>             
+           </tr>
+        	<tr>
+               <th>Weight</th>
+               <td>{!Shipment_Detail__c.Weight_KG__c}</td>             
+           </tr>
+    		<tr>
+               <th>Shipment Type</th>
+               <td>{!Shipment_Detail__c.Shipment_Type__c}</td>             
+           </tr>
+			<tr>
+               <th>Delivery Charge</th>   
+               <td><apex:OutputField value="{!Shipment_Detail__c.Delivery_Charge__c}"/></td>                     
+           </tr>      
+          
+       </apex:repeat>  
+</table>    
+</apex:page>
